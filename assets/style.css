@@ -650,15 +650,24 @@ h1 span {
   opacity: 1;
   visibility: visible;
 }
-
 .mobile-menu h2 {
   font-size: 50px;
   font-style: italic;
-  background: linear-gradient(90deg, #56c7ff, #154dff, #ff263d);
+  font-weight: 900;
+
+  background: linear-gradient(
+    90deg,
+    #56c7ff,
+    #154dff,
+    #ff263d
+  );
+
   -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
-
 .mobile-menu a {
   color: #777;
   font-size: 12px;

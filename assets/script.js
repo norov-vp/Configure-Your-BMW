@@ -246,14 +246,14 @@ function createFloor() {
 ========================================= */
 function createBMW(model, color) {
   const group = new THREE.Group();
-
-  // Material  carBodyMaterial = new THREE.MeshPhysicalMaterial({
-    color: color,
-    metalness: 0.75,
-    roughness: 0.22,
-    clearcoat: 1,
-    clearcoatRoughness: 0.1
-  });
+// Material
+const carBodyMaterial = new THREE.MeshPhysicalMaterial({
+  color: color,
+  metalness: 0.75,
+  roughness: 0.22,
+  clearcoat: 1,
+  clearcoatRoughness: 0.1
+});
 
   // BODY
   const bodyGroup = createBody(color);
@@ -310,6 +310,7 @@ function createBMW(model, color) {
 
   return group;
 }
+
 
 function getModelScale(model) {
   const scales = {

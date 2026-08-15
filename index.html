@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMW M5 — 3D Experience</title>
+  <link rel="stylesheet" href=" />
+
+  <!-- Three.js -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  
+
+
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="bmw-logo"><span>BMW</span></div>
+        <div class="m-logo">M</div>
+      </div>
+      <div class="nav-right">
+        <span class="online"><i></i> 3D TAJRIBA</span>
+        <button id="menuBtn" class="menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero">
+
+      <!-- LEFT -->
+      <section class="hero-info">
+        <p class="eyebrow">BMW M PERFORMANCE</p>
+        <h1>BMW <span id="modelName">M5</span></h1>
+        <p class="subtitle" id="modelTagline">ENG ZOR PERFORMANS SEDANI</p>
+        <p class="description" id="modelDesc">
+          Afsonaviy BMW M5 ni his eting. Performans uchun yaratilgan,
+          aniqlik uchun ishlab chiqilgan va yo'lda hukmronlik qilish uchun mo'ljallangan.
+        </p>
+        <div class="buttons">
+          <button class="primary-btn">KONFIGURATSIYA</button>
+          <button id="rotateBtn" class="secondary-btn">↻ AYLANTIR</button>
+          <button id="resetViewBtn" class="secondary-btn">⟲ QAYTARISH</button>
+        </div>
+        <!-- Rang tanlash -->
+        <div class="color-picker">
+          <span>RANG:</span>
+          <button class="color-btn active" data-color="#b4000c" style="background:#b4000c"></button>
+          <button class="color-btn" data-color="#1a1a2e" style="background:#1a1a2e"></button>
+          <button class="color-btn" data-color="#2d5a27" style="background:#2d5a27"></button>
+          <button class="color-btn" data-color="#4a2a1a" style="background:#4a2a1a"></button>
+          <button class="color-btn" data-color="#1a2a4a" style="background:#1a2a4a"></button>
+          <button class="color-btn" data-color="#f5f5f5" style="background:#f5f5f5;border-color:#555"></button>
+        </div>
+      </section>
+
+      <!-- 3D CAR -->
+      <section id="car-wrapper">
+        <div class="red-light"></div>
+        <div class="blue-light"></div>
+        <div class="floor"></div>
+        <div id="car3d"></div>
+        <div class="drag-hint"><span>↔</span> SURIB AYLANTIR</div>
+        <!-- Kontrol tugmalari -->
+        <div class="car-controls">
+          <button id="openDoorBtn">🚪 Eshik</button>
+          <button id="toggleLightsBtn">💡 Chiroq</button>
+        </div>
+      </section>
+
+      <!-- MODEL MENU -->
+      <aside class="models">
+        <div class="models-title">BMW M</div>
+        <button class="model active" data-model="M5" data-color="#b4000c">M5</button>
+        <button class="model" data-model="M3" data-color="#1a8a3a">M3</button>
+        <button class="model" data-model="M4" data-color="#1a4a8a">M4</button>
+        <button class="model" data-model="M8" data-color="#4a1a2a">M8</button>
+        <button class="model" data-model="XM" data-color="#2a4a1a">XM</button>
+        <button class="model" data-model="i4" data-color="#0a4a6a">i4 M50</button>
+        <button class="model" data-model="M2" data-color="#6a2a0a">M2</button>
+      </aside>
+
+    </main>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat">
+        <strong id="power">717</strong>
+        <span>OT KUCHI</span>
+        <small>MAKSIMUM QUVVAT</small>
+      </div>
+      <div class="stat">
+        <strong id="acceleration">3.4</strong>
+        <span>SONIYA</span>
+        <small>0-100 KM/S</small>
+      </div>
+      <div class="stat">
+        <strong id="speed">305</strong>
+        <span>KM/S</span>
+        <small>ENG YUQORI TEZLIK</small>
+      </div>
+      <div class="stat">
+        <strong id="torque">750</strong>
+        <span>NM</span>
+        <small>MAKSIMUM MOMENT</small>
+      </div>
+    </section>
+
+    <!-- BOTTOM -->
+    <div class="bottom-line">
+      <span>© BMW M PERFORMANCE</span>
+      <span>HAYDAYDIGAN ZAVQ</span>
+    </div>
+
+    <div class="scroll-indicator">
+      <span></span>
+      AYLANTIR
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu">×</button>
+    <h2>BMW M</h2>
+    <a data-model="M5">M5</a>
+    <a data-model="M3">M3</a>
+    <a data-model="M4">M4</a>
+    <a data-model="M8">M8</a>
+    <a data-model="XM">XM</a>
+    <a data-model="i4">i4 M50</a>
+    <a data-model="M2">M2</a>
+  </div>
+
+  <script type="module" src=""></script>
+</body>
+</html>
